@@ -1,0 +1,8 @@
+# Build GDExtension (scons + godot-cpp)
+addons/gmm/bin/
+.sconsign.dblite
+sconsign.dblite
+.scons/
+*.o
+*.os
+*.obj
