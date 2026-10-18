@@ -1,5 +1,7 @@
 # Build GDExtension (scons + godot-cpp)
-addons/gmm/bin/
+# ignore all built binaries, except the ones we ship prebuilt
+addons/gmm/bin/*
+!addons/gmm/bin/android/
 .sconsign.dblite
 sconsign.dblite
 .scons/
