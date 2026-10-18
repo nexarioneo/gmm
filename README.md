@@ -1,14 +1,22 @@
 # GMM — Godot Motion Matching
 
-A **Motion Matching** implementation for **Godot 4.7**, shipped as a GDExtension written in C++.
+**GMM is an open-source Motion Matching plugin for Godot 4.7+, written in C++ as a GDExtension.**
 
-Motion Matching is a data-driven animation technique: instead of hand-authoring state machines, transitions, and blend trees, you feed the system a database of animation frames. Every update, GMM searches that database for the frame whose **features** (trajectory, joint positions, joint velocities) best match what the character is being asked to do right now — producing fluid, responsive, and natural-looking locomotion from raw animation data.
+This **Godot 4.7 Motion Matching** implementation brings data-driven character animation to your games: instead of hand-authoring state machines, transitions, and blend trees, you feed the **GDExtension C++ animation** core a database of animation frames. Every update, it searches that database for the frame whose **features** (trajectory, joint positions, joint velocities) best match what the character is being asked to do — producing fluid, responsive, natural-looking locomotion straight from raw animation data.
 
-The implementation is a Godot port of the concept and architecture from **O3DE's MotionMatching Gem** (built on EMotionFX), redesigned around the Godot API.
+This Godot motion matching plugin is a Godot-API port of the concept and architecture from **O3DE's MotionMatching Gem** (built on EMotionFX), redesigned for the engine and built with modern **C++17**.
+
+## 🎯 Why Motion Matching?
+
+- **No transition spaghetti** — no state machines, no blend trees, no hand-authored transitions.
+- **Every pose is a candidate** — the runtime search considers your entire animation database on every search tick.
+- **Data-driven** — add more animations to the `motions` array, and the system rebuilds its database around them.
 
 ---
 
 ## ✨ Features
+
+Everything below runs inside a single Godot 4.7 GDExtension — no engine fork and no custom Godot build required:
 
 - **Feature-based matching** against a sampled pose database, accelerated with a **KD-tree**
 - **Extensible feature system** via `Feature` resources:
@@ -83,7 +91,7 @@ gmm/
 
 ## ⚠️ About the prebuilt binaries — and an apology 🗿
 
-This project currently ships **exactly one prebuilt binary**:
+This **Godot 4.7 motion matching** GDExtension currently ships **exactly one prebuilt binary**:
 
 | Platform | Architecture | Target | File |
 | --- | --- | --- | --- |
