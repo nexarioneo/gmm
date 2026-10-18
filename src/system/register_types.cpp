@@ -1,4 +1,4 @@
-#include "register_types.h"
+#include "system/register_types.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/classes/editor_plugin_registration.hpp>
@@ -6,17 +6,17 @@
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
-#include "../runtime/EventData.h"
-#include "../debug/MotionMatchingMonitorDock.h"
-#include "../nodes/MotionMatching.h"
-#include "../nodes/MotionMatchingNode.h"
-#include "../features/Feature.h"
-#include "../features/FeatureAngularVelocity.h"
-#include "../features/FeaturePosition.h"
-#include "../features/FeatureSchema.h"
-#include "../features/FeatureTrajectory.h"
-#include "../features/FeatureVelocity.h"
-#include "../math/QueryVector.h"
+#include "runtime/event_data.h"
+#include "debug/monitor_dock.h"
+#include "nodes/motion_matching.h"
+#include "nodes/motion_matching_node.h"
+#include "features/feature.h"
+#include "features/feature_angular_velocity.h"
+#include "features/feature_position.h"
+#include "features/feature_schema.h"
+#include "features/feature_trajectory.h"
+#include "features/feature_velocity.h"
+#include "core/math/query_vector.h"
 
 using namespace godot;
 

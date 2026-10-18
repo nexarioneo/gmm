@@ -1,7 +1,0 @@
-#pragma once
-
-enum ETransformSpace {
-	TRANSFORM_SPACE_LOCAL = 0,
-	TRANSFORM_SPACE_MODEL = 1,
-	TRANSFORM_SPACE_WORLD = 2
-};

@@ -11,10 +11,10 @@ if env["platform"] == "android":
 if ARGUMENTS.get("motion_matching_monitor", "1") == "1":
     env.Append(CPPDEFINES=["GMM_MONITOR_ENABLED"])
 
-env.Append(CPPPATH=["src/", "src/compat"])
+env.Append(CPPPATH=["src/"])
 
 sources = []
-for subdir in ["math", "features", "database", "trajectory", "runtime", "debug", "nodes", "system", "compat"]:
+for subdir in ["core/math", "core/types", "actor", "animation", "pose", "features", "database", "trajectory", "runtime", "nodes", "debug", "system"]:
     sources += Glob("src/%s/*.cpp" % subdir)
 
 platform_dir = env["platform"]
